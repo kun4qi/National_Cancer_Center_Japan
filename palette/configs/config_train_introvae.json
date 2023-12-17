@@ -1,0 +1,41 @@
+{
+    "training": {
+        "seed": 2704, 
+        "timesteps":1000,
+        "n_epochs": 10,
+        "beta_schedule": "cosine",
+        "loss_type": "l2",
+        "lr": 1e-4,
+        "sync_batchnorm": true, 
+        "use_cuda": true, 
+        "visible_devices": "0,1,2,3", 
+        "val_mode": "train"
+    }, 
+    "save": {
+        "study_name": "palette", 
+        "output_root_dir": "./result/", 
+        "save_epoch_interval": 200, 
+        "save_image_epoch_interval": 2, 
+        "n_saved": 1, 
+        "log_iter_interval": 100, 
+        "n_save_images": 2, 
+        "load_model_dir": "", 
+        "model_savename": "", 
+        "num_seed": 100
+    }, 
+    "dataset": {
+        "mode": "train", 
+        "name": "Dataset", 
+        "root_dir_path": "./data", 
+        "use_augmentation": true, 
+        "batch_size": 2, 
+        "num_workers": 16, 
+        "image_size": 256
+    }, 
+    "model": {
+        "in_channel": 4, 
+        "out_channel": 3,
+        "inner_channel": 64,
+        "saved": false
+    }
+  }
