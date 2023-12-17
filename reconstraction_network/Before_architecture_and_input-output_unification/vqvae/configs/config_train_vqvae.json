@@ -1,0 +1,41 @@
+
+{
+  "training": {
+      "seed": 2704, 
+      "timesteps":1000,
+      "n_epochs": 100,
+      "hidden_size": 256,
+      "k": 512,
+      "sync_batchnorm": true, 
+      "use_cuda": true, 
+      "visible_devices": "0,1,2,3", 
+      "val_mode": "train",
+      "loss_type": "ssim+l2"
+  }, 
+  "save": {
+      "study_name": "result_folder", 
+      "output_root_dir": "result/", 
+      "save_epoch_interval": 200, 
+      "save_image_epoch_interval": 2, 
+      "n_saved": 1, 
+      "log_iter_interval": 100, 
+      "n_save_images": 8, 
+      "load_model_dir": "", 
+      "model_savename": "", 
+      "num_seed": 100
+  }, 
+  "dataset": {
+      "mode": "train", 
+      "name": "Dataset", 
+      "root_dir_path": "./data/brats_separated", 
+      "select_slice": "flair", 
+      "use_augmentation": true, 
+      "batch_size": 64, 
+      "num_workers": 16, 
+      "image_size": 256
+  }, 
+  "model": {
+      "input_dim": 1, 
+      "saved": false
+  }
+}
