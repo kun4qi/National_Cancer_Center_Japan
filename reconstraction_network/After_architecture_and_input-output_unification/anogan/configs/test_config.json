@@ -1,0 +1,51 @@
+{
+  "training": {
+    "seed": 4000,
+    "n_epochs": 1000,
+    "z_epochs": 500,
+    "z_lr": 0.0001,
+    "use_cuda": true,
+    "g_weight": 1.0,
+    "d_weight": 1.0,
+    "visible_devices": "0",
+    "sync_batchnorm": true,
+    "val_mode": "train",
+    "n_inner_loops": 1,
+    "w_residual_loss":1.0
+  },
+  "save": {
+    "study_name": "anogan_imgsize128_epoch1000_z_epochs500_zerotoone/batch300",
+    "output_root_dir": "/groups/4/gcd50769/anogan/result/",
+    "save_epoch_interval": 200,
+    "save_image_epoch_interval": 5,
+    "n_saved": 1,
+    "log_iter_interval": 100,
+    "n_save_images": 1,
+    "load_model_dir": "/groups/4/gcd50769/anogan/result/anogan_imgsize128_epoch1000_z_epochs500_zerotoone/version_0/", 
+    "model_savename": "ckpt-epoch=0999.ckpt",
+    "num_seed": 100
+  },
+  "dataset": {
+    "mode": "train",
+    "name": "Dataset",
+    "root_dir_path": "/home/ace14359yb/brats_v2/code/data/brats_separated", 
+    "select_slice": "flair",
+    "use_augmentation": true,
+    "batch_size": 300,
+    "num_workers": 16,
+    "image_size": 128
+  },
+  "model": {
+    "enc_filters": [32, 64, 128, 256, 256, 512, 512],
+    "dec_filters": [512, 256, 128, 64, 32, 16],
+    "input_dim": 1, 
+    "output_dim": 1,
+    "latent_dim": 256,
+    "z_w_h": 4,
+    "saved": false
+  },
+  "optimizer": {
+    "gen_lr": 0.0001,
+    "dis_lr": 0.00001
+  }
+}
