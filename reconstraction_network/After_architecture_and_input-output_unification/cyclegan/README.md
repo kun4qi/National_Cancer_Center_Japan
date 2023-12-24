@@ -12,6 +12,8 @@ cuda11.6, cudnn8.4, python3.10.10, gcc12.2.0(`module load gcc/12.2.0 python/3.10
 ## 学習
 ```train_cyclegan_ssim.py``` 
 identity lossをl2 lossではなく、ssim lossにすることでgan lossとの学習の方向性を緩和
+
+
 そのときの学習条件は```config_train_cyclegan.json```に保存されています。
 
 
